@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#08131d">
-  <meta name="description" content="PWA Compras — lojas e ofertas do ecossistema OIO.">
+  <meta name="theme-color" content="#061522">
+  <meta name="description" content="Compras OIO — lojas e ofertas em um só lugar.">
   <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
   <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="./style.css">
@@ -13,82 +13,64 @@
 <body>
   <main class="app-shell">
     <header class="topbar">
+      <button class="icon-button" type="button" aria-label="Minha conta" data-view="conta"><i data-lucide="user-round"></i></button>
       <div class="brand">
-        <img src="./icon-192.png" alt="" class="brand-icon">
-        <div>
-          <h1>Compras OIO</h1>
-          <p>Encontre lojas e ofertas em um só lugar</p>
-        </div>
+        <h1>Compras OIO</h1>
+        <p>Encontre lojas e ofertas em um só lugar</p>
       </div>
+      <button class="icon-button" type="button" aria-label="Menu"><i data-lucide="menu"></i></button>
     </header>
 
     <section id="view-explorar" class="view active-view">
       <section class="hero">
-        <div>
-          <span class="eyebrow">🛍️ PWA COMPRAS</span>
-          <h2>Onde você quer comprar?</h2>
-          <p>Pesquise uma loja ou escolha uma categoria. Os catálogos serão adicionados por etapas.</p>
+        <div class="search-row">
+          <label class="search">
+            <i data-lucide="search"></i>
+            <input id="searchInput" type="search" placeholder="Buscar lojas ou produtos..." autocomplete="off">
+          </label>
+          <button class="scan-button" type="button" aria-label="Leitor"><i data-lucide="scan-line"></i></button>
         </div>
-        <label class="search">
-          <span aria-hidden="true">⌕</span>
-          <input id="searchInput" type="search" placeholder="Buscar loja..." autocomplete="off">
-        </label>
+        <div id="quickCategories" class="quick-categories"></div>
       </section>
 
       <section class="section">
-        <div class="section-heading">
-          <h2>Lojas</h2>
-          <span id="storeCount"></span>
-        </div>
+        <div class="section-heading"><h2>Lojas</h2><span id="storeCount"></span></div>
         <div id="storeGrid" class="store-grid" aria-live="polite"></div>
       </section>
+
+      <button class="categories-banner" type="button" data-view="categorias">
+        <span class="banner-icon"><i data-lucide="package-search"></i></span>
+        <span class="banner-copy"><strong>Ver todas as categorias</strong><small>Explore os departamentos e encontre ofertas por categoria.</small></span>
+        <i data-lucide="chevron-right"></i>
+      </button>
+
+      <footer>
+        <span><i data-lucide="info"></i> O catálogo será atualizado por etapas.</span>
+        <span><i data-lucide="send"></i> Preparado para o Telégrafo.</span>
+      </footer>
     </section>
 
     <section id="view-categorias" class="view">
-      <div class="page-title">
-        <span class="eyebrow">NAVEGAÇÃO</span>
-        <h2>Categorias</h2>
-        <p>Explore os departamentos que serão usados para organizar os produtos.</p>
-      </div>
+      <div class="page-title"><span class="eyebrow">NAVEGAÇÃO</span><h2>Categorias</h2><p>Organize a descoberta de produtos por departamento.</p></div>
       <div id="categoryGrid" class="category-grid category-page"></div>
     </section>
 
     <section id="view-conta" class="view">
-      <div class="page-title">
-        <span class="eyebrow">SEU ESPAÇO</span>
-        <h2>Minha Conta</h2>
-        <p>Área preparada para favoritos, histórico e preferências.</p>
-      </div>
+      <div class="page-title"><span class="eyebrow">SEU ESPAÇO</span><h2>Minha Conta</h2><p>Área preparada para favoritos, histórico e preferências.</p></div>
       <div class="account-card">
-        <div class="account-avatar">👤</div>
-        <div>
-          <h3>Visitante</h3>
-          <p>Entre futuramente para salvar suas lojas e produtos.</p>
-        </div>
+        <div class="account-avatar"><i data-lucide="user-round"></i></div>
+        <div><h3>Visitante</h3><p>Entre futuramente para salvar suas lojas e produtos.</p></div>
       </div>
     </section>
-
-    <footer>
-      <span>O catálogo será atualizado por etapas.</span>
-      <span>Preparado para o Telégrafo.</span>
-    </footer>
   </main>
 
   <nav class="bottom-nav" aria-label="Navegação principal">
-    <button class="nav-item active" data-view="explorar" type="button">
-      <span class="nav-icon">⌕</span>
-      <span>Explorar</span>
-    </button>
-    <button class="nav-item" data-view="categorias" type="button">
-      <span class="nav-icon">☷</span>
-      <span>Categorias</span>
-    </button>
-    <button class="nav-item" data-view="conta" type="button">
-      <span class="nav-icon">◉</span>
-      <span>Minha Conta</span>
-    </button>
+    <button class="nav-item active" data-view="explorar" type="button"><i data-lucide="search"></i><span>Explorar</span></button>
+    <button class="nav-item" data-view="categorias" type="button"><i data-lucide="grid-2x2"></i><span>Categorias</span></button>
+    <button class="nav-item" data-view="conta" type="button"><i data-lucide="user-round"></i><span>Minha Conta</span></button>
   </nav>
 
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="./app.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,151 @@
+{
+  "categories": [
+    "Todas",
+    "Tecnologia",
+    "Moda",
+    "Casa",
+    "Beleza",
+    "Infantil & Pets",
+    "Celulares",
+    "Acessórios",
+    "Games",
+    "Smartwatches",
+    "Fones",
+    "Notebooks",
+    "Moda feminina",
+    "Moda masculina",
+    "Eletrodomésticos",
+    "Esporte",
+    "Automotivo"
+  ],
+  "stores": [
+    {
+      "name": "Amazon",
+      "icon": "📦",
+      "description": "Catálogo próprio",
+      "source": "Amazon",
+      "categories": [
+        "Todas",
+        "Tecnologia",
+        "Casa",
+        "Celulares",
+        "Acessórios",
+        "Games",
+        "Fones",
+        "Notebooks"
+      ]
+    },
+    {
+      "name": "Mercado Livre",
+      "icon": "🛒",
+      "description": "Catálogo próprio",
+      "source": "Mercado Livre",
+      "categories": [
+        "Todas",
+        "Tecnologia",
+        "Casa",
+        "Celulares",
+        "Acessórios",
+        "Games",
+        "Fones",
+        "Notebooks",
+        "Automotivo"
+      ]
+    },
+    {
+      "name": "Magalu",
+      "icon": "💙",
+      "description": "Catálogo próprio",
+      "source": "Magalu",
+      "categories": [
+        "Todas",
+        "Tecnologia",
+        "Casa",
+        "Celulares",
+        "Acessórios",
+        "Eletrodomésticos",
+        "Moda"
+      ]
+    },
+    {
+      "name": "Awin",
+      "icon": "🔗",
+      "description": "Rede de anunciantes",
+      "source": "Awin",
+      "categories": [
+        "Todas",
+        "Tecnologia",
+        "Moda",
+        "Casa",
+        "Beleza",
+        "Esporte"
+      ]
+    },
+    {
+      "name": "Lomadee",
+      "icon": "🏪",
+      "description": "Rede de afiliados",
+      "source": "Lomadee",
+      "categories": [
+        "Todas",
+        "Tecnologia",
+        "Casa",
+        "Moda",
+        "Beleza"
+      ]
+    },
+    {
+      "name": "Temu",
+      "icon": "🟠",
+      "description": "Catálogo próprio",
+      "source": "Temu",
+      "categories": [
+        "Todas",
+        "Tecnologia",
+        "Casa",
+        "Acessórios",
+        "Moda"
+      ]
+    },
+    {
+      "name": "Shein",
+      "icon": "👗",
+      "description": "Catálogo próprio",
+      "source": "Shein",
+      "categories": [
+        "Todas",
+        "Moda",
+        "Moda feminina",
+        "Moda masculina",
+        "Acessórios",
+        "Beleza"
+      ]
+    },
+    {
+      "name": "Banggood",
+      "icon": "🧰",
+      "description": "Catálogo próprio",
+      "source": "Banggood",
+      "categories": [
+        "Todas",
+        "Tecnologia",
+        "Acessórios",
+        "Games",
+        "Automotivo"
+      ]
+    },
+    {
+      "name": "TikTok Shop",
+      "icon": "🎵",
+      "description": "Catálogo próprio",
+      "source": "TikTok",
+      "categories": [
+        "Todas",
+        "Moda",
+        "Beleza",
+        "Casa",
+        "Acessórios"
+      ]
+    }
+  ]
+}
