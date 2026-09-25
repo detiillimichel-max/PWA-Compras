@@ -22,29 +22,50 @@
       </div>
     </header>
 
-    <section class="hero">
-      <div>
-        <span class="eyebrow">🛍️ PWA COMPRAS</span>
-        <h2>Onde você quer comprar?</h2>
-        <p>Pesquise uma loja ou escolha uma categoria. Os catálogos serão adicionados por etapas.</p>
-      </div>
-      <label class="search">
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" placeholder="Buscar loja..." autocomplete="off">
-      </label>
+    <section id="view-explorar" class="view active-view">
+      <section class="hero">
+        <div>
+          <span class="eyebrow">🛍️ PWA COMPRAS</span>
+          <h2>Onde você quer comprar?</h2>
+          <p>Pesquise uma loja ou escolha uma categoria. Os catálogos serão adicionados por etapas.</p>
+        </div>
+        <label class="search">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar loja..." autocomplete="off">
+        </label>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <h2>Lojas</h2>
+          <span id="storeCount"></span>
+        </div>
+        <div id="storeGrid" class="store-grid" aria-live="polite"></div>
+      </section>
     </section>
 
-    <section class="section">
-      <div class="section-heading">
-        <h2>Lojas</h2>
-        <span id="storeCount"></span>
+    <section id="view-categorias" class="view">
+      <div class="page-title">
+        <span class="eyebrow">NAVEGAÇÃO</span>
+        <h2>Categorias</h2>
+        <p>Explore os departamentos que serão usados para organizar os produtos.</p>
       </div>
-      <div id="storeGrid" class="store-grid" aria-live="polite"></div>
+      <div id="categoryGrid" class="category-grid category-page"></div>
     </section>
 
-    <section class="section">
-      <div class="section-heading"><h2>Categorias</h2></div>
-      <div id="categoryGrid" class="category-grid"></div>
+    <section id="view-conta" class="view">
+      <div class="page-title">
+        <span class="eyebrow">SEU ESPAÇO</span>
+        <h2>Minha Conta</h2>
+        <p>Área preparada para favoritos, histórico e preferências.</p>
+      </div>
+      <div class="account-card">
+        <div class="account-avatar">👤</div>
+        <div>
+          <h3>Visitante</h3>
+          <p>Entre futuramente para salvar suas lojas e produtos.</p>
+        </div>
+      </div>
     </section>
 
     <footer>
@@ -52,6 +73,22 @@
       <span>Preparado para o Telégrafo.</span>
     </footer>
   </main>
+
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <button class="nav-item active" data-view="explorar" type="button">
+      <span class="nav-icon">⌕</span>
+      <span>Explorar</span>
+    </button>
+    <button class="nav-item" data-view="categorias" type="button">
+      <span class="nav-icon">☷</span>
+      <span>Categorias</span>
+    </button>
+    <button class="nav-item" data-view="conta" type="button">
+      <span class="nav-icon">◉</span>
+      <span>Minha Conta</span>
+    </button>
+  </nav>
+
   <script src="./app.js" defer></script>
 </body>
 </html>
